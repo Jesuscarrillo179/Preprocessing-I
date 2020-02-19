@@ -78,21 +78,31 @@ html, body {
 	display: flex;
 	justify-content: flex-end;
 	border-bottom:1px solid #5a5a5a;
+	@media (max-width:500px) {
+			justify-content: flex-start;
+	}	
 	.nav-container{
 		width: 30%;
 		display: flex;
 		justify-content: space-between;
+		@media (max-width:500px) {
+			width: 100%;
+		}
 		a{
 			font-size: 20px;
 			text-decoration: none;
 			padding: 2% 5% 2% 0%;
 			.fontclass();
 			&:hover {
-				color:red;
+				color:white;
 			}
-		}
+			@media (max-width:500px) {
+				padding-left: 5%;
+			}	
+		}	
 	}
 }
+
 
 .header-section {
 	background-color:#c5c5c5;
@@ -100,10 +110,16 @@ html, body {
 	display: flex;
 	align-items: center;
 	justify-content:space-between;
-
+	@media (max-width:500px) {
+		flex-direction: column;
+		padding-bottom: 5%;
+	}
 	.top-img-container{
 		width:30%;
 		padding: 3%;
+		@media (max-width:500px) {
+			width: 80%;
+		}
 		img{
 			padding: 5%;
 			background-color: @fontcolor;
@@ -120,11 +136,18 @@ html, body {
 		flex-direction: column;
 		border: 20px solid #5a5a5a;
 		padding: 2%;
+		@media (max-width:500px) {
+			width: 80%;
+			padding:3%;
+		}
 		h1{
 			font-size: 90px;
 			width: auto;
 			text-transform: uppercase;
 			.fontclass();
+			@media (max-width:500px) {
+				font-size: 36px;
+			}
 		}
 		h2{
 			padding-top: 2%;
@@ -133,12 +156,19 @@ html, body {
 			color: #a4a4a4;
 			text-transform: uppercase;
 			font-family: @mainfont;
+			@media (max-width:500px) {
+				font-size: 20px;
+			}
 		}
+
 	}
 }
 
 .body-section {
 	display: flex;
+	@media (max-width:500px) {
+		flex-direction: column;
+	}
 	.left-section{
 		width: 30%;
 		display: flex;
@@ -146,6 +176,10 @@ html, body {
 		align-items: center;
 		background-color: #e7e7e7;
 		border-top:2px solid #5a5a5a;
+		@media (max-width:500px) {
+			width: 100%;
+			border:none;
+		}
 		.info {
 			padding-top: 5%;
 			padding-bottom: 5%;
@@ -179,13 +213,37 @@ html, body {
 		align-items: center;
 		background-color: white;
 		border-top:2px solid #5a5a5a;
+		@media (max-width:500px) {
+			width: 100%;
+			border: none;
+		}
 		.info {
 			padding-top: 2.5%;
 			padding-bottom: 2.5%;
 			width: 70%;
+			line-height: 50px;
 			h2 {
-				font-family: @mainfont;
+				padding-top: 2.5%;
+				padding-bottom: 2.5%;
+				.fontclassbold();
 				font-size: 60px;
+				@media (max-width:500px) {
+					font-size: 40px;
+					text-align: center;
+				}
+			}
+			h3 {
+				padding-top: 2.5%;
+				padding-bottom: 2.5%;
+				.fontclassbold();
+				font-size: 30px;
+			}
+			p, li{
+				.fontclass();
+				font-size: 20px;
+				@media (max-width:500px) {
+					font-size: 18px;
+				}
 			}
 		}
 	}
